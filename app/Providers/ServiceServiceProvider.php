@@ -10,6 +10,11 @@ use Illuminate\Support\ServiceProvider;
 
 class ServiceServiceProvider extends ServiceProvider
 {
+    public $singletons = [
+        PostService::class => PostImplService::class,
+        EmailService::class => EmailImplService::class
+    ];
+
     /**
      * Bootstrap services.
      *
@@ -27,11 +32,6 @@ class ServiceServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton(PostService::class, function (){
-            return new PostImplService();
-        });
-        $this->app->singleton(EmailService::class, function (){
-            return new EmailImplService();
-        });
+        //
     }
 }

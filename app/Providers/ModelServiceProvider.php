@@ -8,6 +8,10 @@ use Illuminate\Support\ServiceProvider;
 
 class ModelServiceProvider extends ServiceProvider
 {
+    public $singletons = [
+        PostModel::class => PostImplModel::class
+    ];
+
     /**
      * Bootstrap services.
      *
@@ -25,8 +29,6 @@ class ModelServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton(PostModel::class, function (){
-            return new PostImplModel();
-        });
+        //
     }
 }
