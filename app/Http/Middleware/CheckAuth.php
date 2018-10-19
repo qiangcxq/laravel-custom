@@ -15,9 +15,11 @@ class CheckAuth
      */
     public function handle($request, Closure $next)
     {
+        if (in_array($request->path(), config('auth.ignore'))){
+            return $next($request);
+        }
         if ($request->header('Auth-Token')){
 //            todo auth-token的验证
-            return $next($request);
         } else {
             return response()->json(['code' => 500, 'msg' => 'Auth-Token不能为空']);
         }
