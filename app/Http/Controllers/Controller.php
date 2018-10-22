@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Services\EmailService;
 use App\Services\PostService;
+use App\Services\WechatService;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -20,5 +21,9 @@ class Controller extends BaseController
 
     protected function getPostService(){
         return resolve(PostService::class);
+    }
+
+    protected function getWechatService(){
+        return resolve(WechatService::class);
     }
 }

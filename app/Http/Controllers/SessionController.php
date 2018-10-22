@@ -15,6 +15,13 @@ class SessionController extends Controller
 {
     public function login(Request $request){
         $code = $request->post('code');
-        return response()->json(['data' => $code]);
+        $result = $this->getWechatService()->getCode2Session($code);
+        if (!isset($result['errcode'])){
+            $sessionKey = $result['session_key'];
+            $openId = $result['openid'];
+        } else {
+
+        }
+        return response()->json(['data' => $result]);
     }
 }
