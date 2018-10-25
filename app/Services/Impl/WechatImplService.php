@@ -32,7 +32,7 @@ class WechatImplService extends BaseService implements WechatService
         $openId = $result['openid'];
         $sessionKey = $result['session_key'];
         $userInfo['session_key'] = $sessionKey;
-        Cache::put($this->generateSessionKey($openId), json_encode($userInfo));
+        Cache::forever($this->generateSessionKey($openId), json_encode($userInfo));
         return true;
     }
 
