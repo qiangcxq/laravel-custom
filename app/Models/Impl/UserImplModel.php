@@ -29,7 +29,6 @@ class UserImplModel extends BaseModel implements UserModel
                 'open_id'     => $userInfo['open_id'],
                 'username'    => $userInfo['nickName'],
                 'avatar'      => $userInfo['avatarUrl'],
-                'mobile'      => $userInfo['mobile'],
                 'country'     => $userInfo['country'],
                 'province'    => $userInfo['province'],
                 'city'        => $userInfo['city'],
