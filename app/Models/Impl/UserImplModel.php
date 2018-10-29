@@ -27,7 +27,7 @@ class UserImplModel extends BaseModel implements UserModel
         return DB::table($this->table)
             ->insert([
                 'open_id'     => $userInfo['open_id'],
-                'username'    => $userInfo['nickname'],
+                'username'    => $userInfo['nickName'],
                 'avatar'      => $userInfo['avatarUrl'],
                 'mobile'      => $userInfo['mobile'],
                 'country'     => $userInfo['country'],
