@@ -34,8 +34,8 @@ class UserImplModel extends BaseModel implements UserModel
                 'city'        => $userInfo['city'],
                 'language'    => $userInfo['language'],
                 'gender'      => $userInfo['gender'],
-                'create_time' => time(),
-                'update_time' => time(),
+                'create_time' => date('Y-m-d H:i:s'),
+                'update_time' => date('Y-m-d H:i:s'),
             ]);
     }
 }
