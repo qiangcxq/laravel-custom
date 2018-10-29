@@ -18,7 +18,7 @@ class SessionController extends Controller
         $code = $request->post('code');
         $userInfo = $request->post('user_info')['detail']['userInfo'];
         list($openId, $sessionKey) = $this->getWechatService()->getCode2Session($code);
-        resolve(SessionService::class)->login($openId, $sessionKey, $userInfo);
-        return reply(200, '');
+        $session = resolve(SessionService::class)->login($openId, $sessionKey, $userInfo);
+        return reply(200, '', ['session' => $session]);
     }
 }

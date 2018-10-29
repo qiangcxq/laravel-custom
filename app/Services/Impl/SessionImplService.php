@@ -30,7 +30,7 @@ class SessionImplService extends BaseService implements SessionService
         $sessionRedisKey = $this->generateKey($session);
         if (!resolve(UserService::class)->ifExistByOpenId($openId)) resolve(UserService::class)->register($userInfo);
         Cache::forever($sessionRedisKey, json_encode($userInfo));
-        return true;
+        return $session;
     }
 
     private function generateSession(){
