@@ -13,7 +13,6 @@ use App\Exceptions\ServiceException;
 use App\Services\BaseService;
 use App\Services\WechatService;
 use GuzzleHttp\Client;
-use Illuminate\Support\Facades\Cache;
 
 class WechatImplService extends BaseService implements WechatService
 {
@@ -32,8 +31,7 @@ class WechatImplService extends BaseService implements WechatService
         $openId = $result['openid'];
         $sessionKey = $result['session_key'];
         $userInfo['session_key'] = $sessionKey;
-        Cache::forever($this->generateSessionKey($openId), json_encode($userInfo));
-        return true;
+        return [$openId, $sessionKey];
     }
 
     public function generateSessionKey($openId){
