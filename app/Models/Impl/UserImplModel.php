@@ -24,11 +24,11 @@ class UserImplModel extends BaseModel implements UserModel
 
     public function register($userInfo)
     {
-        DB::table($this->table)
+        return DB::table($this->table)
             ->insert([
                 'open_id'     => $userInfo['open_id'],
                 'username'    => $userInfo['nickname'],
-                'avatar'   => $userInfo['avatarUrl'],
+                'avatar'      => $userInfo['avatarUrl'],
                 'mobile'      => $userInfo['mobile'],
                 'country'     => $userInfo['country'],
                 'province'    => $userInfo['province'],
@@ -38,6 +38,5 @@ class UserImplModel extends BaseModel implements UserModel
                 'create_time' => time(),
                 'update_time' => time(),
             ]);
-        return $result;
     }
 }
