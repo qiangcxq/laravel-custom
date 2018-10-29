@@ -12,4 +12,6 @@ namespace App\Services;
 interface SessionService
 {
     public function generateKey($openId);
+
+    public function login($openId, $sessionKey, $userInfo);
 }

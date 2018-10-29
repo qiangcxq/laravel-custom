@@ -10,9 +10,7 @@ namespace App\Http\Controllers;
 
 
 use App\Services\SessionService;
-use App\Services\UserService;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Cache;
 
 class SessionController extends Controller
 {
@@ -20,15 +18,7 @@ class SessionController extends Controller
         $code = $request->post('code');
         $userInfo = $request->post('user_info')['detail']['userInfo'];
         list($openId, $sessionKey) = $this->getWechatService()->getCode2Session($code);
-        $userInfo['session_key'] = $sessionKey;
-        $userInfo['open_id'] = $openId;
-        if (resolve(UserService::class)->ifExistByOpenId($openId)){
-            Cache::forever(resolve(SessionService::class)->generateKey($openId), json_encode($userInfo));
-            return reply(200, '登陆成功');
-        } else {
-            resolve(UserService::class)->register($userInfo);
-            Cache::forever(resolve(SessionService::class)->generateKey($openId), json_encode($userInfo));
-            return reply(200, '注册成功');
-        }
+        resolve(SessionService::class)->login($openId, $sessionKey, $userInfo);
+        return reply(200, '');
     }
 }
