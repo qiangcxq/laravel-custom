@@ -20,6 +20,7 @@ class CheckAuth
         }
         if ($request->header('Auth-Token')){
 //            todo auth-token的验证
+            return $next($request);
         } else {
             return response()->json(['code' => 500, 'msg' => 'Auth-Token不能为空']);
         }

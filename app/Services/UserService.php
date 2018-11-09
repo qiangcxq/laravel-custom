@@ -14,4 +14,6 @@ interface UserService
     public function ifExistByOpenId($openId);
 
     public function register($userInfo);
+
+    public function updateLocation($latitude, $longitude);
 }

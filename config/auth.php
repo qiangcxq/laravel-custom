@@ -2,6 +2,7 @@
 
 return [
     'ignore' => [
-        'api/login'
+        'api/login',
+        'api/test',
     ]
 ];

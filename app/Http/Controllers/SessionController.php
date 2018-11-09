@@ -21,4 +21,8 @@ class SessionController extends Controller
         $session = resolve(SessionService::class)->login($openId, $sessionKey, $userInfo);
         return reply(200, '', ['session' => $session]);
     }
+
+    public function test(Request $request){
+        return reply(200, '测试', ['session' => '陈波', 'get' => $request->query(), 'post' => $request->post(), 'file' => $request->file()]);
+    }
 }

@@ -12,6 +12,7 @@ namespace App\Services\Impl;
 use App\Models\Impl\UserImplModel;
 use App\Services\BaseService;
 use App\Services\UserService;
+use Illuminate\Support\Facades\DB;
 
 class UserImplService extends BaseService implements UserService
 {
@@ -23,5 +24,14 @@ class UserImplService extends BaseService implements UserService
     public function register($userInfo)
     {
         return resolve(UserImplModel::class)->register($userInfo);
+    }
+
+    public function updateLocation($latitude, $longitude)
+    {
+        $userId = 1;
+        return DB::table('user')->where('id', $userId)->update([
+            'latitude' => $latitude,
+            'longitude' => $longitude,
+        ]);
     }
 }
