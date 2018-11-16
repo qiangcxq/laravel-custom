@@ -16,7 +16,7 @@ set('git_tty', false);
 
 // Shared files/dirs between deploys 
 set('shared_files', []);
-set('shared_dirs', []);
+set('shared_dirs', ['deploy']);
 
 // Writable dirs by web server 
 set('writable_dirs', ['storage']);
@@ -32,7 +32,7 @@ host('114.115.138.227')
 
 // Tasks
 task('nginx', function (){
-    run('cp ./deploy/book /etc/nginx/sites-available/book');
+    run('cp {{deploy_path}}/laravel-custom/deploy/book /etc/nginx/sites-available/book');
     run('ln -s /etc/nginx/sites-available/book /etc/nginx/sites-enabled/book');
 });
 desc('Deploy your project');
