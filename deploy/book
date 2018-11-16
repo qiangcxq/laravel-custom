@@ -1,0 +1,17 @@
+server {
+        listen 8081 default_server;
+        listen [::]:8081 default_server;
+
+        root /var/www/html/book/laravel-custom/public;
+        index index.php;
+
+        location / {
+                try_files $uri $uri/ /index.php?$query_string;
+        }
+
+        location ~ \.php$ {
+                include snippets/fastcgi-php.conf;
+                # fastcgi_pass 127.0.0.1:9000;
+                fastcgi_pass unix:/run/php/php7.1-fpm.sock;
+        }
+}

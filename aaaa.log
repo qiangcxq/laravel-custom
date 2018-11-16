@@ -1,0 +1,256 @@
+[114.115.138.227] > echo $0
+[114.115.138.227] < [error] mux_client_request_session: read from master failed: Connection reset by peer
+[114.115.138.227] < [error] ControlSocket /c/Users/hr/.ssh/deployer_root@114.115.138.227 already exists, disabling multiplexing
+[114.115.138.227] < bash
+[114.115.138.227] > if [ ! -d /var/www/html/book ]; then mkdir -p /var/www/html/book; fi
+[114.115.138.227] < [error] mux_client_request_session: read from master failed: Connection reset by peer
+[114.115.138.227] < [error] ControlSocket /c/Users/hr/.ssh/deployer_root@114.115.138.227 already exists, disabling multiplexing
+[114.115.138.227] > if [ ! -L /var/www/html/book/current ] && [ -d /var/www/html/book/current ]; then echo 'true'; fi
+[114.115.138.227] < [error] mux_client_request_session: read from master failed: Connection reset by peer
+[114.115.138.227] < [error] ControlSocket /c/Users/hr/.ssh/deployer_root@114.115.138.227 already exists, disabling multiplexing
+[114.115.138.227] > cd /var/www/html/book && if [ ! -d .dep ]; then mkdir .dep; fi
+[114.115.138.227] < [error] mux_client_request_session: read from master failed: Connection reset by peer
+[114.115.138.227] < [error] ControlSocket /c/Users/hr/.ssh/deployer_root@114.115.138.227 already exists, disabling multiplexing
+[114.115.138.227] > cd /var/www/html/book && if [ ! -d releases ]; then mkdir releases; fi
+[114.115.138.227] < [error] mux_client_request_session: read from master failed: Connection reset by peer
+[114.115.138.227] < [error] ControlSocket /c/Users/hr/.ssh/deployer_root@114.115.138.227 already exists, disabling multiplexing
+[114.115.138.227] > cd /var/www/html/book && if [ ! -d shared ]; then mkdir shared; fi
+[114.115.138.227] < [error] mux_client_request_session: read from master failed: Connection reset by peer
+[114.115.138.227] < [error] ControlSocket /c/Users/hr/.ssh/deployer_root@114.115.138.227 already exists, disabling multiplexing
+[114.115.138.227] > if [ -f /var/www/html/book/.dep/deploy.lock ]; then echo 'true'; fi
+[114.115.138.227] < [error] mux_client_request_session: read from master failed: Connection reset by peer
+[114.115.138.227] < [error] ControlSocket /c/Users/hr/.ssh/deployer_root@114.115.138.227 already exists, disabling multiplexing
+[114.115.138.227] > touch /var/www/html/book/.dep/deploy.lock
+[114.115.138.227] < [error] mux_client_request_session: read from master failed: Connection reset by peer
+[114.115.138.227] < [error] ControlSocket /c/Users/hr/.ssh/deployer_root@114.115.138.227 already exists, disabling multiplexing
+[114.115.138.227] > cd /var/www/html/book && (if [ -h release ]; then echo 'true'; fi)
+[114.115.138.227] < [error] mux_client_request_session: read from master failed: Connection reset by peer
+[114.115.138.227] < [error] ControlSocket /c/Users/hr/.ssh/deployer_root@114.115.138.227 already exists, disabling multiplexing
+[114.115.138.227] > cd /var/www/html/book && (if [ -d releases ] && [ "$(ls -A releases)" ]; then echo 'true'; fi)
+[114.115.138.227] < [error] mux_client_request_session: read from master failed: Connection reset by peer
+[114.115.138.227] < [error] ControlSocket /c/Users/hr/.ssh/deployer_root@114.115.138.227 already exists, disabling multiplexing
+[114.115.138.227] < true
+[114.115.138.227] > cd /var/www/html/book && (cd releases && ls -t -1 -d */)
+[114.115.138.227] < [error] mux_client_request_session: read from master failed: Connection reset by peer
+[114.115.138.227] < [error] ControlSocket /c/Users/hr/.ssh/deployer_root@114.115.138.227 already exists, disabling multiplexing
+[114.115.138.227] < 4/
+[114.115.138.227] < 3/
+[114.115.138.227] < 2/
+[114.115.138.227] < 1/
+[114.115.138.227] > cd /var/www/html/book && (if [ -f .dep/releases ]; then echo 'true'; fi)
+[114.115.138.227] < [error] mux_client_request_session: read from master failed: Connection reset by peer
+[114.115.138.227] < [error] ControlSocket /c/Users/hr/.ssh/deployer_root@114.115.138.227 already exists, disabling multiplexing
+[114.115.138.227] < true
+[114.115.138.227] > cd /var/www/html/book && (tail -n 15 .dep/releases)
+[114.115.138.227] < [error] mux_client_request_session: read from master failed: Connection reset by peer
+[114.115.138.227] < [error] ControlSocket /c/Users/hr/.ssh/deployer_root@114.115.138.227 already exists, disabling multiplexing
+[114.115.138.227] < 20181116132800,1
+[114.115.138.227] < 20181116133024,1
+[114.115.138.227] < 20181116134109,1
+[114.115.138.227] < 20181116134314,1
+[114.115.138.227] < 20181116134852,2
+[114.115.138.227] < 20181116135016,3
+[114.115.138.227] < 20181116135216,4
+[114.115.138.227] > cd /var/www/html/book && (if [ -d /var/www/html/book/releases/5 ]; then echo 'true'; fi)
+[114.115.138.227] < [error] mux_client_request_session: read from master failed: Connection reset by peer
+[114.115.138.227] < [error] ControlSocket /c/Users/hr/.ssh/deployer_root@114.115.138.227 already exists, disabling multiplexing
+[114.115.138.227] > cd /var/www/html/book && (date +"%Y%m%d%H%M%S")
+[114.115.138.227] < [error] mux_client_request_session: read from master failed: Connection reset by peer
+[114.115.138.227] < [error] ControlSocket /c/Users/hr/.ssh/deployer_root@114.115.138.227 already exists, disabling multiplexing
+[114.115.138.227] < 20181116135708
+[114.115.138.227] > cd /var/www/html/book && (echo '20181116135708,5' >> .dep/releases)
+[114.115.138.227] < [error] mux_client_request_session: read from master failed: Connection reset by peer
+[114.115.138.227] < [error] ControlSocket /c/Users/hr/.ssh/deployer_root@114.115.138.227 already exists, disabling multiplexing
+[114.115.138.227] > cd /var/www/html/book && (mkdir /var/www/html/book/releases/5)
+[114.115.138.227] < [error] mux_client_request_session: read from master failed: Connection reset by peer
+[114.115.138.227] < [error] ControlSocket /c/Users/hr/.ssh/deployer_root@114.115.138.227 already exists, disabling multiplexing
+[114.115.138.227] > cd /var/www/html/book && (if [[ $(man ln 2>&1 || ln -h 2>&1 || ln --help 2>&1) =~ '--relative' ]]; then echo 'true'; fi)
+[114.115.138.227] < [error] mux_client_request_session: read from master failed: Connection reset by peer
+[114.115.138.227] < true
+[114.115.138.227] < [error] ControlSocket /c/Users/hr/.ssh/deployer_root@114.115.138.227 already exists, disabling multiplexing
+[114.115.138.227] > cd /var/www/html/book && (ln -nfs --relative /var/www/html/book/releases/5 /var/www/html/book/release)
+[114.115.138.227] < [error] mux_client_request_session: read from master failed: Connection reset by peer
+[114.115.138.227] < [error] ControlSocket /c/Users/hr/.ssh/deployer_root@114.115.138.227 already exists, disabling multiplexing
+[114.115.138.227] > command -v "git" || which "git" || type -p "git"
+[114.115.138.227] < [error] mux_client_request_session: read from master failed: Connection reset by peer
+[114.115.138.227] < [error] ControlSocket /c/Users/hr/.ssh/deployer_root@114.115.138.227 already exists, disabling multiplexing
+[114.115.138.227] < /usr/bin/git
+[114.115.138.227] > /usr/bin/git version
+[114.115.138.227] < [error] mux_client_request_session: read from master failed: Connection reset by peer
+[114.115.138.227] < [error] ControlSocket /c/Users/hr/.ssh/deployer_root@114.115.138.227 already exists, disabling multiplexing
+[114.115.138.227] < git version 2.7.4
+[114.115.138.227] > cd /var/www/html/book && (if [ -h /var/www/html/book/release ]; then echo 'true'; fi)
+[114.115.138.227] < [error] mux_client_request_session: read from master failed: Connection reset by peer
+[114.115.138.227] < [error] ControlSocket /c/Users/hr/.ssh/deployer_root@114.115.138.227 already exists, disabling multiplexing
+[114.115.138.227] < true
+[114.115.138.227] > cd /var/www/html/book && (readlink /var/www/html/book/release)
+[114.115.138.227] < [error] mux_client_request_session: read from master failed: Connection reset by peer
+[114.115.138.227] < [error] ControlSocket /c/Users/hr/.ssh/deployer_root@114.115.138.227 already exists, disabling multiplexing
+[114.115.138.227] < releases/5
+[114.115.138.227] > cd /var/www/html/book && (/usr/bin/git clone -b v0.0.1 --recursive -q --reference /var/www/html/book/releases/4 --dissociate https://github.com/YWNA/laravel-custom.git  /var/www/html/book/releases/5 2>&1)
+[114.115.138.227] < [error] mux_client_request_session: read from master failed: Connection reset by peer
+[114.115.138.227] < [error] ControlSocket /c/Users/hr/.ssh/deployer_root@114.115.138.227 already exists, disabling multiplexing
+[114.115.138.227] < fatal: Remote branch v0.0.1 not found in upstream origin
+[114.115.138.227] > cd /var/www/html/book && (/usr/bin/git clone -b v0.0.1 --recursive -q https://github.com/YWNA/laravel-custom.git /var/www/html/book/releases/5 2>&1)
+[114.115.138.227] < [error] mux_client_request_session: read from master failed: Connection reset by peer
+[114.115.138.227] < [error] ControlSocket /c/Users/hr/.ssh/deployer_root@114.115.138.227 already exists, disabling multiplexing
+[114.115.138.227] < fatal: Remote branch v0.0.1 not found in upstream origin
+[Deployer\Exception\RuntimeException] The command "cd /var/www/html/book && (/usr/bin/git clone -b v0.0.1 --recursive -q https://github.com/YWNA/laravel-custom.git /var/www/html/book/releases/5 2>&1)" failed.
+
+Exit Code: 128 (Invalid exit argument)
+
+Host Name: 114.115.138.227
+
+================
+mux_client_request_session: read from master failed: Connection reset by peer
+ControlSocket /c/Users/hr/.ssh/deployer_root@114.115.138.227 already exists, disabling multiplexing
+
+#0 D:\code\laravel-custom\vendor\deployer\deployer\src\functions.php(304): Deployer\Ssh\Client->run(Object(Deployer\Host\Host), 'cd /var/www/htm...', Array)
+#1 D:\code\laravel-custom\vendor\deployer\deployer\recipe\deploy\update_code.php(86): Deployer\run('cd /var/www/htm...', Array)
+#2 [internal function]: Deployer\Deployer::Deployer\{closure}()
+#3 D:\code\laravel-custom\vendor\deployer\deployer\src\Task\Task.php(105): call_user_func(Object(Closure))
+#4 D:\code\laravel-custom\vendor\deployer\deployer\src\Executor\SeriesExecutor.php(63): Deployer\Task\Task->run(Object(Deployer\Task\Context))
+#5 D:\code\laravel-custom\vendor\deployer\deployer\src\Console\TaskCommand.php(142): Deployer\Executor\SeriesExecutor->run(Array, Array)
+#6 D:\code\laravel-custom\vendor\symfony\console\Command\Command.php(255): Deployer\Console\TaskCommand->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Deployer\Console\Output\OutputWatcher))
+#7 D:\code\laravel-custom\vendor\symfony\console\Application.php(886): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Deployer\Console\Output\OutputWatcher))
+#8 D:\code\laravel-custom\vendor\deployer\deployer\src\Console\Application.php(133): Symfony\Component\Console\Application->doRunCommand(Object(Deployer\Console\TaskCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Deployer\Console\Output\OutputWatcher))
+#9 D:\code\laravel-custom\vendor\symfony\console\Application.php(262): Deployer\Console\Application->doRunCommand(Object(Deployer\Console\TaskCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Deployer\Console\Output\OutputWatcher))
+#10 D:\code\laravel-custom\vendor\symfony\console\Application.php(145): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\code\laravel-custom\vendor\deployer\deployer\src\Deployer.php(331): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 D:\code\laravel-custom\vendor\deployer\deployer\bin\dep(120): Deployer\Deployer::run('v6.3.0', 'D:\\code\\laravel...')
+#13 {main}
+[114.115.138.227] > rm -f /var/www/html/book/.dep/deploy.lock
+[114.115.138.227] < [error] mux_client_request_session: read from master failed: Connection reset by peer
+[114.115.138.227] < [error] ControlSocket /c/Users/hr/.ssh/deployer_root@114.115.138.227 already exists, disabling multiplexing
+[114.115.138.227] > echo $0
+[114.115.138.227] < [error] mux_client_request_session: read from master failed: Connection reset by peer
+[114.115.138.227] < [error] ControlSocket /c/Users/hr/.ssh/deployer_root@114.115.138.227 already exists, disabling multiplexing
+[114.115.138.227] < bash
+[114.115.138.227] > if [ ! -d /var/www/html/book ]; then mkdir -p /var/www/html/book; fi
+[114.115.138.227] < [error] mux_client_request_session: read from master failed: Connection reset by peer
+[114.115.138.227] < [error] ControlSocket /c/Users/hr/.ssh/deployer_root@114.115.138.227 already exists, disabling multiplexing
+[114.115.138.227] > if [ ! -L /var/www/html/book/current ] && [ -d /var/www/html/book/current ]; then echo 'true'; fi
+[114.115.138.227] < [error] mux_client_request_session: read from master failed: Connection reset by peer
+[114.115.138.227] < [error] ControlSocket /c/Users/hr/.ssh/deployer_root@114.115.138.227 already exists, disabling multiplexing
+[114.115.138.227] > cd /var/www/html/book && if [ ! -d .dep ]; then mkdir .dep; fi
+[114.115.138.227] < [error] mux_client_request_session: read from master failed: Connection reset by peer
+[114.115.138.227] < [error] ControlSocket /c/Users/hr/.ssh/deployer_root@114.115.138.227 already exists, disabling multiplexing
+[114.115.138.227] > cd /var/www/html/book && if [ ! -d releases ]; then mkdir releases; fi
+[114.115.138.227] < [error] mux_client_request_session: read from master failed: Connection reset by peer
+[114.115.138.227] < [error] ControlSocket /c/Users/hr/.ssh/deployer_root@114.115.138.227 already exists, disabling multiplexing
+[114.115.138.227] > cd /var/www/html/book && if [ ! -d shared ]; then mkdir shared; fi
+[114.115.138.227] < [error] mux_client_request_session: read from master failed: Connection reset by peer
+[114.115.138.227] < [error] ControlSocket /c/Users/hr/.ssh/deployer_root@114.115.138.227 already exists, disabling multiplexing
+[114.115.138.227] > if [ -f /var/www/html/book/.dep/deploy.lock ]; then echo 'true'; fi
+[114.115.138.227] < [error] mux_client_request_session: read from master failed: Connection reset by peer
+[114.115.138.227] < [error] ControlSocket /c/Users/hr/.ssh/deployer_root@114.115.138.227 already exists, disabling multiplexing
+[114.115.138.227] > touch /var/www/html/book/.dep/deploy.lock
+[114.115.138.227] < [error] mux_client_request_session: read from master failed: Connection reset by peer
+[114.115.138.227] < [error] ControlSocket /c/Users/hr/.ssh/deployer_root@114.115.138.227 already exists, disabling multiplexing
+[114.115.138.227] > cd /var/www/html/book && (if [ -h release ]; then echo 'true'; fi)
+[114.115.138.227] < [error] mux_client_request_session: read from master failed: Connection reset by peer
+[114.115.138.227] < [error] ControlSocket /c/Users/hr/.ssh/deployer_root@114.115.138.227 already exists, disabling multiplexing
+[114.115.138.227] < true
+[114.115.138.227] > cd /var/www/html/book && (rm -rf "$(readlink release)")
+[114.115.138.227] < [error] mux_client_request_session: read from master failed: Connection reset by peer
+[114.115.138.227] < [error] ControlSocket /c/Users/hr/.ssh/deployer_root@114.115.138.227 already exists, disabling multiplexing
+[114.115.138.227] > cd /var/www/html/book && (rm release)
+[114.115.138.227] < [error] mux_client_request_session: read from master failed: Connection reset by peer
+[114.115.138.227] < [error] ControlSocket /c/Users/hr/.ssh/deployer_root@114.115.138.227 already exists, disabling multiplexing
+[114.115.138.227] > cd /var/www/html/book && (if [ -d releases ] && [ "$(ls -A releases)" ]; then echo 'true'; fi)
+[114.115.138.227] < [error] mux_client_request_session: read from master failed: Connection reset by peer
+[114.115.138.227] < [error] ControlSocket /c/Users/hr/.ssh/deployer_root@114.115.138.227 already exists, disabling multiplexing
+[114.115.138.227] < true
+[114.115.138.227] > cd /var/www/html/book && (cd releases && ls -t -1 -d */)
+[114.115.138.227] < [error] mux_client_request_session: read from master failed: Connection reset by peer
+[114.115.138.227] < [error] ControlSocket /c/Users/hr/.ssh/deployer_root@114.115.138.227 already exists, disabling multiplexing
+[114.115.138.227] < 4/
+[114.115.138.227] < 3/
+[114.115.138.227] < 2/
+[114.115.138.227] < 1/
+[114.115.138.227] > cd /var/www/html/book && (if [ -f .dep/releases ]; then echo 'true'; fi)
+[114.115.138.227] < [error] mux_client_request_session: read from master failed: Connection reset by peer
+[114.115.138.227] < [error] ControlSocket /c/Users/hr/.ssh/deployer_root@114.115.138.227 already exists, disabling multiplexing
+[114.115.138.227] < true
+[114.115.138.227] > cd /var/www/html/book && (tail -n 15 .dep/releases)
+[114.115.138.227] < [error] mux_client_request_session: read from master failed: Connection reset by peer
+[114.115.138.227] < [error] ControlSocket /c/Users/hr/.ssh/deployer_root@114.115.138.227 already exists, disabling multiplexing
+[114.115.138.227] < 20181116132800,1
+[114.115.138.227] < 20181116133024,1
+[114.115.138.227] < 20181116134109,1
+[114.115.138.227] < 20181116134314,1
+[114.115.138.227] < 20181116134852,2
+[114.115.138.227] < 20181116135016,3
+[114.115.138.227] < 20181116135216,4
+[114.115.138.227] < 20181116135708,5
+[114.115.138.227] > cd /var/www/html/book && (if [ -d /var/www/html/book/releases/5 ]; then echo 'true'; fi)
+[114.115.138.227] < [error] mux_client_request_session: read from master failed: Connection reset by peer
+[114.115.138.227] < [error] ControlSocket /c/Users/hr/.ssh/deployer_root@114.115.138.227 already exists, disabling multiplexing
+[114.115.138.227] > cd /var/www/html/book && (date +"%Y%m%d%H%M%S")
+[114.115.138.227] < [error] mux_client_request_session: read from master failed: Connection reset by peer
+[114.115.138.227] < [error] ControlSocket /c/Users/hr/.ssh/deployer_root@114.115.138.227 already exists, disabling multiplexing
+[114.115.138.227] < 20181116135959
+[114.115.138.227] > cd /var/www/html/book && (echo '20181116135959,5' >> .dep/releases)
+[114.115.138.227] < [error] mux_client_request_session: read from master failed: Connection reset by peer
+[114.115.138.227] < [error] ControlSocket /c/Users/hr/.ssh/deployer_root@114.115.138.227 already exists, disabling multiplexing
+[114.115.138.227] > cd /var/www/html/book && (mkdir /var/www/html/book/releases/5)
+[114.115.138.227] < [error] mux_client_request_session: read from master failed: Connection reset by peer
+[114.115.138.227] < [error] ControlSocket /c/Users/hr/.ssh/deployer_root@114.115.138.227 already exists, disabling multiplexing
+[114.115.138.227] > cd /var/www/html/book && (if [[ $(man ln 2>&1 || ln -h 2>&1 || ln --help 2>&1) =~ '--relative' ]]; then echo 'true'; fi)
+[114.115.138.227] < [error] mux_client_request_session: read from master failed: Connection reset by peer
+[114.115.138.227] < [error] ControlSocket /c/Users/hr/.ssh/deployer_root@114.115.138.227 already exists, disabling multiplexing
+[114.115.138.227] < true
+[114.115.138.227] > cd /var/www/html/book && (ln -nfs --relative /var/www/html/book/releases/5 /var/www/html/book/release)
+[114.115.138.227] < [error] mux_client_request_session: read from master failed: Connection reset by peer
+[114.115.138.227] < [error] ControlSocket /c/Users/hr/.ssh/deployer_root@114.115.138.227 already exists, disabling multiplexing
+[114.115.138.227] > command -v "git" || which "git" || type -p "git"
+[114.115.138.227] < [error] mux_client_request_session: read from master failed: Connection reset by peer
+[114.115.138.227] < /usr/bin/git
+[114.115.138.227] < [error] ControlSocket /c/Users/hr/.ssh/deployer_root@114.115.138.227 already exists, disabling multiplexing
+[114.115.138.227] > /usr/bin/git version
+[114.115.138.227] < [error] mux_client_request_session: read from master failed: Connection reset by peer
+[114.115.138.227] < [error] ControlSocket /c/Users/hr/.ssh/deployer_root@114.115.138.227 already exists, disabling multiplexing
+[114.115.138.227] < git version 2.7.4
+[114.115.138.227] > cd /var/www/html/book && (if [ -h /var/www/html/book/release ]; then echo 'true'; fi)
+[114.115.138.227] < [error] mux_client_request_session: read from master failed: Connection reset by peer
+[114.115.138.227] < [error] ControlSocket /c/Users/hr/.ssh/deployer_root@114.115.138.227 already exists, disabling multiplexing
+[114.115.138.227] < true
+[114.115.138.227] > cd /var/www/html/book && (readlink /var/www/html/book/release)
+[114.115.138.227] < [error] mux_client_request_session: read from master failed: Connection reset by peer
+[114.115.138.227] < [error] ControlSocket /c/Users/hr/.ssh/deployer_root@114.115.138.227 already exists, disabling multiplexing
+[114.115.138.227] < releases/5
+[114.115.138.227] > cd /var/www/html/book && (/usr/bin/git clone -b book --recursive -q --reference /var/www/html/book/releases/4 --dissociate https://github.com/YWNA/laravel-custom.git  /var/www/html/book/releases/5 2>&1)
+[114.115.138.227] < [error] mux_client_request_session: read from master failed: Connection reset by peer
+[114.115.138.227] < [error] ControlSocket /c/Users/hr/.ssh/deployer_root@114.115.138.227 already exists, disabling multiplexing
+[114.115.138.227] > cd /var/www/html/book && (cd /var/www/html/book/releases/5 && /usr/bin/git checkout 1)
+[114.115.138.227] < [error] mux_client_request_session: read from master failed: Connection reset by peer
+[114.115.138.227] < [error] ControlSocket /c/Users/hr/.ssh/deployer_root@114.115.138.227 already exists, disabling multiplexing
+[114.115.138.227] < [error] error: pathspec '1' did not match any file(s) known to git.
+[Deployer\Exception\RuntimeException] The command "cd /var/www/html/book && (cd /var/www/html/book/releases/5 && /usr/bin/git checkout 1)" failed.
+
+Exit Code: 1 (General error)
+
+Host Name: 114.115.138.227
+
+================
+mux_client_request_session: read from master failed: Connection reset by peer
+ControlSocket /c/Users/hr/.ssh/deployer_root@114.115.138.227 already exists, disabling multiplexing
+error: pathspec '1' did not match any file(s) known to git.
+
+#0 D:\code\laravel-custom\vendor\deployer\deployer\src\functions.php(304): Deployer\Ssh\Client->run(Object(Deployer\Host\Host), 'cd /var/www/htm...', Array)
+#1 D:\code\laravel-custom\vendor\deployer\deployer\recipe\deploy\update_code.php(94): Deployer\run('cd /var/www/htm...')
+#2 [internal function]: Deployer\Deployer::Deployer\{closure}()
+#3 D:\code\laravel-custom\vendor\deployer\deployer\src\Task\Task.php(105): call_user_func(Object(Closure))
+#4 D:\code\laravel-custom\vendor\deployer\deployer\src\Executor\SeriesExecutor.php(63): Deployer\Task\Task->run(Object(Deployer\Task\Context))
+#5 D:\code\laravel-custom\vendor\deployer\deployer\src\Console\TaskCommand.php(142): Deployer\Executor\SeriesExecutor->run(Array, Array)
+#6 D:\code\laravel-custom\vendor\symfony\console\Command\Command.php(255): Deployer\Console\TaskCommand->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Deployer\Console\Output\OutputWatcher))
+#7 D:\code\laravel-custom\vendor\symfony\console\Application.php(886): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Deployer\Console\Output\OutputWatcher))
+#8 D:\code\laravel-custom\vendor\deployer\deployer\src\Console\Application.php(133): Symfony\Component\Console\Application->doRunCommand(Object(Deployer\Console\TaskCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Deployer\Console\Output\OutputWatcher))
+#9 D:\code\laravel-custom\vendor\symfony\console\Application.php(262): Deployer\Console\Application->doRunCommand(Object(Deployer\Console\TaskCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Deployer\Console\Output\OutputWatcher))
+#10 D:\code\laravel-custom\vendor\symfony\console\Application.php(145): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\code\laravel-custom\vendor\deployer\deployer\src\Deployer.php(331): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 D:\code\laravel-custom\vendor\deployer\deployer\bin\dep(120): Deployer\Deployer::run('v6.3.0', 'D:\\code\\laravel...')
+#13 {main}
+[114.115.138.227] > rm -f /var/www/html/book/.dep/deploy.lock
+[114.115.138.227] < [error] mux_client_request_session: read from master failed: Connection reset by peer
+[114.115.138.227] < [error] ControlSocket /c/Users/hr/.ssh/deployer_root@114.115.138.227 already exists, disabling multiplexing

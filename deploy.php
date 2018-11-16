@@ -31,7 +31,10 @@ host('114.115.138.227')
     ->set('deploy_path', '/var/www/html/{{application}}');
 
 // Tasks
-
+task('nginx', function (){
+    run('cp ./deploy/book /etc/nginx/sites-available/book');
+    run('ln -s /etc/nginx/sites-available/book /etc/nginx/sites-enabled/book');
+});
 desc('Deploy your project');
 task('deploy', [
     'deploy:info',
