@@ -5,6 +5,13 @@
  * Date: 2018/10/24
  * Time: 16:47
  */
+
+/**
+ * @param $code
+ * @param string $msg
+ * @param array $data
+ * @return \Illuminate\Http\JsonResponse
+ */
 function reply($code, $msg = '', $data = []){
     return response()->json([
         'code' => $code,

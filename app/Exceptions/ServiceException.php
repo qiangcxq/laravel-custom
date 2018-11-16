@@ -11,5 +11,13 @@ namespace App\Exceptions;
 
 class ServiceException extends \Exception
 {
+    public function report()
+    {
 
+    }
+
+    public function render($request, \Exception $exception)
+    {
+        return response()->json(['code' => 5001, 'msg' => $exception->getMessage(), 'detail' => $exception->getFile()]);
+    }
 }
