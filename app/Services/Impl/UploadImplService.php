@@ -19,7 +19,6 @@ class UploadImplService extends BaseService implements UploadService
     public function getInit($dir = null)
     {
         $url = \config('rpc.url') . '?service=storage';
-        return $url;
         try{
             $client = new \Yar_Client($url);
             $client->SetOpt(YAR_OPT_CONNECT_TIMEOUT, 5000);
